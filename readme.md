@@ -5,5 +5,6 @@
 </p>
 
 # Personal Blog
+[My Site](https://nextjs-notion-blog-wfy.vercel.app/)
 
 A NextJS-based Personal Blog, with Notion as a CMS, A clone of [NextJS Notion Starter Kit](https://github.com/transitive-bullshit/nextjs-notion-starter-kit)
