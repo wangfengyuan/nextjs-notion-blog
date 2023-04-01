@@ -12,6 +12,9 @@ export interface SiteConfig {
 
   twitter?: string
   github?: string
+  wechatPublicName?: string;
+  wechatPublicURL?: string;
+  notionPublic?: string,
   linkedin?: string
   newsletter?: string
   youtube?: string

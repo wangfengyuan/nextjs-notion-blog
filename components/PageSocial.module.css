@@ -94,10 +94,18 @@
 }
 
 .github .actionBgPane {
-  background: #c9510c;
+  background: black;
 }
 .github:hover {
-  border-color: #c9510c;
+  border-color: black;
+}
+
+.wechatPublicName .actionBgPane {
+  background: #1AAD19;
+}
+
+.wechatPublicName:hover {
+  border-color: #2BA245;
 }
 
 .youtube .actionBgPane {
@@ -126,6 +134,30 @@
 }
 .email:hover {
   border-color: #777;
+}
+
+.twitter:hover > .tooltiptext,
+.github:hover > .tooltiptext,
+.wechatPublicName:hover > .tooltiptext {
+  visibility: visible;
+}
+
+/* Tooltip 文本 */
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  font-size: 12px;
+  background-color: #DDEDEA;
+  color: #0F7B6C;
+  text-align: center;
+  padding: 1px 0;
+  border-radius: 3px;
+  top: 0;
+  left: 105%; 
+
+  /* 定位 */
+  position: absolute;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 768px) {

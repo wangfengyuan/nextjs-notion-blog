@@ -9,6 +9,7 @@ import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
 import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
+import { SiWechat, SiNotion } from 'react-icons/si'
 
 import * as config from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
@@ -96,6 +97,7 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaGithub />
+            <span className={styles.tooltiptext}>@{config.github}</span>
           </a>
         )}
 
@@ -132,6 +134,31 @@ export const FooterImpl: React.FC = () => {
             rel='noopener noreferrer'
           >
             <FaYoutube />
+          </a>
+        )}
+        {config.wechatPublicName && (
+          <a
+            className={styles.wechatPublicName}
+            href={`${config.wechatPublicURL}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <SiWechat />
+            <span className={styles.tooltiptext}>
+              公众号: {config.wechatPublicName}
+            </span>
+          </a>
+        )}
+        {config.notionPublic && (
+          <a
+            className={styles.notionPublic}
+            href={`${config.notionPublic}`}
+            title='通过 Notion 打开'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <SiNotion />
+            <span className={styles.tooltiptext}>从 Notion 打开</span>
           </a>
         )}
       </div>

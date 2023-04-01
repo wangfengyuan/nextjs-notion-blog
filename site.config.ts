@@ -11,7 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: 'Next.js Notion Starter Kit',
   domain: 'test.wfy.blog',
-  author: 'wangfengyuan',
+  author: '王丰圆',
 
   // open graph metadata (optional)
   description: 'Example Next.js Notion Starter Kit Site',
@@ -19,6 +19,9 @@ export default siteConfig({
   // social usernames (optional)
   // twitter: 'transitive_bs',
   github: 'wangfengyuan',
+  wechatPublicName: '十点半前端',
+  wechatPublicURL: '/',
+  notionPublic: 'https://wangfengyuan.notion.site/6e4c1aee7c57432baf035aee373fb317',
   // linkedin: 'fisch2',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL

@@ -73,6 +73,7 @@
   padding: 0.25em;
   margin-right: 1vw;
   transition: color 250ms ease-out;
+  position: relative;
 }
 
 .settings a:last-of-type,
@@ -102,7 +103,7 @@
 }
 
 .github:hover {
-  color: #c9510c;
+  color: black;
 }
 
 .youtube:hover {
@@ -115,6 +116,37 @@
 
 .newsletter:hover {
   color: #777777;
+}
+
+/* Notion footbar 样式 */
+.notionPublic:hover {
+  color: #975DBE;
+}
+
+
+/* footbar tooltip */
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  font-size: 15px;
+  background-color: #DDEDEA;
+  color: #0F7B6C;
+  text-align: center;
+  padding: 1px 0;
+  border-radius: 3px;
+
+  /* 定位 */
+  position: absolute;
+  z-index: 1;
+}
+
+.github:hover > .tooltiptext,
+.wechatPublicName:hover > .tooltiptext,
+.notionPublic:hover > .tooltiptext {
+  visibility: visible;
+  width: 130px;
+  bottom: 45px;
+  left: -50%;
 }
 
 .comments {
