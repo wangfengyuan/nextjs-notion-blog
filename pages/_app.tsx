@@ -18,6 +18,7 @@ import 'styles/global.css'
 import 'styles/notion.css'
 // global style overrides for prism theme (optional)
 import 'styles/prism-theme.css'
+import ReactGA from 'react-ga4'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
@@ -25,7 +26,8 @@ import {
   fathomId,
   isServer,
   posthogConfig,
-  posthogId
+  posthogId,
+  googleAnalyticsTrackingID,
 } from '@/lib/config'
 
 if (!isServer) {
@@ -34,6 +36,11 @@ if (!isServer) {
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
+  if (googleAnalyticsTrackingID) {
+    ReactGA.initialize(googleAnalyticsTrackingID)
+    ReactGA.send("pageview")
+  }
 
   React.useEffect(() => {
     function onRouteChangeComplete() {

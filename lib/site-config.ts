@@ -20,6 +20,7 @@ export interface SiteConfig {
   youtube?: string
   zhihu?: string
   mastodon?: string;
+  googleAnalyticsId?: string;
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null
