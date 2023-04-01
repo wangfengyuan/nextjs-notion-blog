@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Next.js Notion Starter Kit',
-  domain: 'test.wfy.blog',
+  domain: 'blog.codefe.top',
   author: '王丰圆',
 
   // open graph metadata (optional)
