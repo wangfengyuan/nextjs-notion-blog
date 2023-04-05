@@ -140,10 +140,6 @@ export const redisNamespace: string | null = getEnv(
 export const isServer = typeof window === 'undefined'
 
 export const port = getEnv('PORT', '3000')
-export const googleAnalyticsTrackingID = getEnv(
-  'GOOGLE_ANALYTICS_TRACKING_ID',
-  ''
-)
 export const host = isDev ? `http://localhost:${port}` : `https://${domain}`
 export const apiHost = isDev
   ? host
@@ -175,6 +171,8 @@ export const fathomConfig = fathomId
   : undefined
 
 export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
+export const googleAnalyticsTrackingID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICSS_ID
+
 export const posthogConfig: Partial<PostHogConfig> = {
   api_host: 'https://app.posthog.com'
 }
