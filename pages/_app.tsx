@@ -37,11 +37,6 @@ if (!isServer) {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
-  if (googleAnalyticsTrackingID) {
-    ReactGA.initialize(googleAnalyticsTrackingID)
-    ReactGA.send("pageview")
-  }
-
   React.useEffect(() => {
     function onRouteChangeComplete() {
       if (fathomId) {
@@ -50,6 +45,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
       if (posthogId) {
         posthog.capture('$pageview')
+      }
+
+      if (googleAnalyticsTrackingID) {
+        ReactGA.initialize(googleAnalyticsTrackingID)
+        ReactGA.send({ hitType: "pageview", page: location.pathname })
       }
     }
 
