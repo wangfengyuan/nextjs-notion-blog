@@ -55,11 +55,16 @@
 }
 
 .notion-gallery-grid .notion-page-icon-inline {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notion-page-icon-inline span {
+  font-size: 1.2em;
 }
 
 .notion-gallery-grid .notion-page-title-text {
-  font-size: 2em;
+  font-size: 1.2em;
   white-space: unset;
 }
 
@@ -101,7 +106,11 @@
 }
 
 .notion-collection-card-body {
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.notion-collection-card-property img {
+  max-height: 2em;
 }
 
 /* only target safari */
