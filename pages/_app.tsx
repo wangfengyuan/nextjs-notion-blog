@@ -21,19 +21,14 @@ import 'styles/notion.css'
 import 'styles/prism-theme.css'
 import ReactGA from 'react-ga4'
 
-import { bootstrap } from '@/lib/bootstrap-client'
 import {
   fathomConfig,
   fathomId,
-  isServer,
   posthogConfig,
   posthogId,
   googleAnalyticsTrackingID,
 } from '@/lib/config'
 
-if (!isServer) {
-  // bootstrap()
-}
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
