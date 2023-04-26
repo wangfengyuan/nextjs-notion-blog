@@ -57,12 +57,12 @@ export default siteConfig({
   navigationStyle: 'custom',
   navigationLinks: [
     {
-      title: 'About',
+      title: '关于作者',
       pageId: '8ba18c4e306748aab894a011c77e2cbb'
     },
     {
-      title: 'Contact',
-      pageId: 'c4a76477ddf54262a884405b893eb4a9'
+      title: '每日练习',
+      pageId: '4cc5471481124157884a643f3078eb8f'
     }
   ]
 })

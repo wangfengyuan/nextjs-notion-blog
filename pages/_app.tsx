@@ -32,7 +32,7 @@ import {
 } from '@/lib/config'
 
 if (!isServer) {
-  bootstrap()
+  // bootstrap()
 }
 
 export default function App({ Component, pageProps }: AppProps) {

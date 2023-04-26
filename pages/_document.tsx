@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             <link rel='manifest' href='/manifest.json' />
           </Head>
 
-          <body>
+          <body className='font-sans antialiased'>
             <script
               dangerouslySetInnerHTML={{
                 __html: `

@@ -45,38 +45,44 @@ export const NotionPageHeader: React.FC<{
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={false} />
+        <div className='flex gap-6 md:gap-10 font-bold'>
+          <Breadcrumbs block={block} rootOnly={false} />
+          <nav className='hidden gap-6 md:flex'>
+            {navigationLinks
+              ?.map((link, index) => {
+                if (!link.pageId && !link.url) {
+                  return null
+                }
+
+                if (link.pageId) {
+                  return (
+                    <components.PageLink
+                      href={mapPageUrl(link.pageId)}
+                      key={index}
+                      className='flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm text-foreground/60'
+                    >
+                      {link.title}
+                    </components.PageLink>
+                  )
+                } else {
+                  return (
+                    <components.Link
+                      href={link.url}
+                      key={index}
+                      className='flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm text-foreground/60'
+                    >
+                      {link.title}
+                    </components.Link>
+                  )
+                }
+              })
+              .filter(Boolean)}
+          </nav>
+          
+        </div>
 
         <div className='notion-nav-header-rhs breadcrumbs'>
-          {navigationLinks
-            ?.map((link, index) => {
-              if (!link.pageId && !link.url) {
-                return null
-              }
-
-              if (link.pageId) {
-                return (
-                  <components.PageLink
-                    href={mapPageUrl(link.pageId)}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.PageLink>
-                )
-              } else {
-                return (
-                  <components.Link
-                    href={link.url}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.Link>
-                )
-              }
-            })
-            .filter(Boolean)}
+          
 
           <ToggleThemeButton />
 
