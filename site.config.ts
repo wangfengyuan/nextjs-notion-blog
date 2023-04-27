@@ -62,7 +62,7 @@ export default siteConfig({
     },
     {
       title: '每日练习',
-      pageId: 'd0ddb801c46145759956659e45816de4'
+      pageId: 'c6d03ef090b54342911cf675e9624352'
     }
   ]
 })
