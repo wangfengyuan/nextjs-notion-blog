@@ -14,7 +14,7 @@ import { Analytics } from '@vercel/analytics/react';
 import 'react-notion-x/src/styles.css'
 import 'styles/global.css'
 // this might be better for dark mode
-import 'prismjs/themes/prism-solarizedlight.min.css'
+import 'prismjs/themes/prism-tomorrow.min.css'
 // global style overrides for notion
 import 'styles/notion.css'
 // global style overrides for prism theme (optional)
