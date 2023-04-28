@@ -123,3 +123,7 @@ pre[class*='language-']:before,
 pre[class*='language-']:after {
   display: none !important;
 }
+
+code[class*="language-"], pre[class*="language-"] {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
