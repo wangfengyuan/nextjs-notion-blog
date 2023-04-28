@@ -18,6 +18,7 @@ import { mapImageUrl } from '@/lib/map-image-url'
 import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
+import Giscus from "@giscus/react";
 
 import { Footer } from './Footer'
 import { GitHubShareButton } from './GitHubShareButton'
@@ -242,6 +243,30 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+  let comments: React.ReactNode = null
+
+  if (block.type === 'page' && block.parent_table === 'collection') {
+    
+    comments = (
+      <Giscus
+        id="comments"
+        repo="wangfengyuan/nextjs-notion-blog"
+        repoId="R_kgDOIxzyEw"
+        category="General"
+        categoryId="DIC_kwDOIxzyE84CWG2p"
+        mapping="title"
+        term="Welcome to @giscus/react component!"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        inputPosition="bottom"
+        theme="preferred_color_scheme"
+        lang="zh-CN"
+        loading="lazy"
+      />
+    )
+  }
+  
+
   return (
     <>
       <PageHead
@@ -278,6 +303,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
+        pageFooter={comments}
         footer={footer}
       />
 
