@@ -157,7 +157,6 @@
   padding: 0.2em 0.75em;
   line-height: 1.5;
   font-style: italic;
-  font-size: 1.2em;
   border-left: 4px solid #67bdfc;
 }
 
@@ -169,6 +168,10 @@
 
 .notion-callout {
   margin: 0.75em 0;
+}
+
+.notion-toggle {
+	width: 100%;
 }
 
 @media only screen and (max-width: 920px) {
