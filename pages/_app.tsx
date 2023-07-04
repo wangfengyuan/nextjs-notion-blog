@@ -20,6 +20,7 @@ import 'styles/notion.css'
 // global style overrides for prism theme (optional)
 import 'styles/prism-theme.css'
 import ReactGA from 'react-ga4'
+import ChatBot from '@/components/ChatBot'
 
 import {
   fathomConfig,
@@ -70,6 +71,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <Analytics />
+      <ChatBot />
     </>
   )
 }
