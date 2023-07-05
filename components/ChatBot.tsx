@@ -4,7 +4,7 @@ import { BubbleChat } from "flowise-embed-react";
 const Chatbot = () => {
   return (
     <BubbleChat
-      chatflowid="eddfac63-bcc5-4c3b-ab68-e1eaa2f8c5e2"
+      chatflowid="cc999e86-159c-4c96-855b-55b5108cf761"
       apiHost="https://flowise.codefe.top"
     />
   );
