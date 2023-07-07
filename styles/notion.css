@@ -243,9 +243,8 @@
   }
 }
 
-.notion-block-ab9a258d6cf444f3bb40dc2600feae91 .notion-page-link {
-  justify-content: center;
-  padding: 2em;
+.notion-block-82bfbadf8ef944e396f4a90258467aef .notion-page-link {
+  display: none;
 }
 
 .notion-code {
